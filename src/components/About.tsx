@@ -1,4 +1,5 @@
 import { Target, Eye, Award } from "lucide-react";
+import productsImage from "@/assets/products-showcase.jpg";
 
 const About = () => {
   return (
@@ -15,7 +16,15 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6 animate-fade-in">
+            <div className="order-2 md:order-1 animate-fade-in">
+              <img
+                src={productsImage}
+                alt="Produtos personalizados PERSONALIZADOS PMW"
+                className="rounded-2xl shadow-elegant w-full h-auto object-cover"
+              />
+            </div>
+
+            <div className="space-y-6 order-1 md:order-2 animate-fade-in animation-delay-200">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -47,37 +56,37 @@ const About = () => {
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="bg-gradient-to-br from-primary/10 to-accent/5 rounded-2xl p-8 animate-fade-in animation-delay-200">
-              <Award className="w-16 h-16 text-primary mb-6" />
-              <h3 className="text-2xl font-bold mb-4">Diferenciais</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span className="text-muted-foreground">
-                    Tecnologia de ponta em DTF UV, DTF Têxtil e gravação a laser
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span className="text-muted-foreground">
-                    Atendimento personalizado e humanizado
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span className="text-muted-foreground">
-                    Resultados únicos com acabamento premium
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span className="text-muted-foreground">
-                    Orgulho tocantinense em cada projeto
-                  </span>
-                </li>
-              </ul>
-            </div>
+          <div className="bg-gradient-to-br from-primary/10 to-accent/5 rounded-2xl p-8 animate-fade-in animation-delay-400">
+            <Award className="w-16 h-16 text-primary mb-6" />
+            <h3 className="text-2xl font-bold mb-4">Diferenciais</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                <span className="text-muted-foreground">
+                  Tecnologia de ponta em DTF UV, DTF Têxtil e gravação a laser
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                <span className="text-muted-foreground">
+                  Atendimento personalizado e humanizado
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                <span className="text-muted-foreground">
+                  Resultados únicos com acabamento premium
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                <span className="text-muted-foreground">
+                  Orgulho tocantinense em cada projeto
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
