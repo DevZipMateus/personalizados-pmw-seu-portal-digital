@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
-  const isVitrineRoute = location.pathname === '/vitrine';
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -18,19 +19,46 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+    if (isHomePage) {
+      // Se estamos na home, fazer scroll direto
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+        setIsMobileMenuOpen(false);
+      }
+    } else {
+      // Se estamos em outra página, navegar para home e fazer scroll
+      navigate(`/#${id}`);
       setIsMobileMenuOpen(false);
     }
   };
+
+  // Efeito para fazer scroll quando navegamos com hash
+  useEffect(() => {
+    if (location.hash && isHomePage) {
+      const id = location.hash.replace('#', '');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const offset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
+    }
+  }, [location.hash, isHomePage]);
 
   const navItems = [
     { label: "Início", id: "hero", type: "scroll" },
@@ -45,8 +73,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-lg transition-all duration-300">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <button
-            onClick={() => scrollToSection("hero")}
+          <Link
+            to="/"
             className="flex items-center gap-3 group"
           >
             <img
@@ -57,7 +85,7 @@ const Header = () => {
             <span className="text-xl font-bold gradient-gold hidden sm:block">
               PERSONALIZADOS PMW
             </span>
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
