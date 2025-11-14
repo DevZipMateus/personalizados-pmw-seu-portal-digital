@@ -2,11 +2,11 @@ import Header from "@/components/Header";
 
 const Vitrine = () => {
   return (
-    <div className="h-screen w-full overflow-hidden flex flex-col">
+    <div className="h-screen w-full overflow-hidden">
       <Header />
       
-      {/* Main content - iframe ocupando espaço restante */}
-      <main className="flex-1 w-full overflow-hidden" style={{ height: 'calc(100vh - 80px - 63px)' }}>
+      {/* Main content - iframe ocupando espaço restante com padding-top para compensar header fixo */}
+      <main className="w-full pt-20 overflow-hidden" style={{ height: 'calc(100vh - 63px)' }}>
         <iframe
           src="https://pmw.egestor.com.br/vitrine/"
           className="w-full h-full"
