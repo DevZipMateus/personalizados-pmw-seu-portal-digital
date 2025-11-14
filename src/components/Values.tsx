@@ -1,5 +1,4 @@
 import { Heart, Lightbulb, Users, TrendingUp, CheckCircle, MapPin } from "lucide-react";
-import teamImage from "@/assets/team-values.jpg";
 
 const Values = () => {
   const values = [
@@ -46,14 +45,6 @@ const Values = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Princípios que guiam nosso trabalho e relacionamento com cada cliente
             </p>
-          </div>
-
-          <div className="mt-16 rounded-2xl overflow-hidden shadow-elegant animate-fade-in">
-            <img
-              src={teamImage}
-              alt="Equipe PERSONALIZADOS PMW trabalhando com qualidade e dedicação"
-              className="w-full h-auto object-cover"
-            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
