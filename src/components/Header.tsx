@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+  const isVitrineRoute = location.pathname === '/vitrine';
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -30,11 +33,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: "Início", id: "hero" },
-    { label: "Sobre", id: "about" },
-    { label: "Tecnologias", id: "technologies" },
-    { label: "Valores", id: "values" },
-    { label: "Contato", id: "contact" },
+    { label: "Início", id: "hero", type: "scroll" },
+    { label: "Sobre", id: "about", type: "scroll" },
+    { label: "Tecnologias", id: "technologies", type: "scroll" },
+    { label: "Valores", id: "values", type: "scroll" },
+    { label: "Contato", id: "contact", type: "scroll" },
+    { label: "Vitrine", id: "/vitrine", type: "route" },
   ];
 
   return (
@@ -64,14 +68,25 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <Button
-                key={item.id}
-                variant="ghost"
-                onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors"
-              >
-                {item.label}
-              </Button>
+              item.type === "route" ? (
+                <Button
+                  key={item.id}
+                  variant="ghost"
+                  asChild
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  <Link to={item.id}>{item.label}</Link>
+                </Button>
+              ) : (
+                <Button
+                  key={item.id}
+                  variant="ghost"
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </Button>
+              )
             ))}
           </nav>
 
@@ -94,14 +109,26 @@ const Header = () => {
         {isMobileMenuOpen && (
           <nav className="md:hidden pb-4 animate-fade-in">
             {navItems.map((item) => (
-              <Button
-                key={item.id}
-                variant="ghost"
-                onClick={() => scrollToSection(item.id)}
-                className="w-full justify-start text-foreground hover:text-primary"
-              >
-                {item.label}
-              </Button>
+              item.type === "route" ? (
+                <Button
+                  key={item.id}
+                  variant="ghost"
+                  asChild
+                  className="w-full justify-start text-foreground hover:text-primary"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Link to={item.id}>{item.label}</Link>
+                </Button>
+              ) : (
+                <Button
+                  key={item.id}
+                  variant="ghost"
+                  onClick={() => scrollToSection(item.id)}
+                  className="w-full justify-start text-foreground hover:text-primary"
+                >
+                  {item.label}
+                </Button>
+              )
             ))}
           </nav>
         )}
