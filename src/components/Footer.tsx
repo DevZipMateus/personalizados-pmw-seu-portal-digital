@@ -30,7 +30,7 @@ const Footer = () => {
                 className="h-28 w-28 object-contain"
               />
               <span className="text-xl font-bold gradient-gold">
-                PMW Personalizados
+                Personalizados PMW
               </span>
             </div>
             <p className="text-secondary-foreground/80 leading-relaxed mb-4">
