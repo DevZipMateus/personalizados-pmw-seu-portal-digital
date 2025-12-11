@@ -79,11 +79,11 @@ const Header = () => {
           >
             <img
               src="/logo.png"
-              alt="PERSONALIZADOS PMW"
+              alt="PMW Personalizados"
               className="h-12 w-12 object-contain transition-transform group-hover:scale-110"
             />
             <span className="text-xl font-bold gradient-gold hidden sm:block">
-              PERSONALIZADOS PMW
+              PMW Personalizados
             </span>
           </Link>
 
