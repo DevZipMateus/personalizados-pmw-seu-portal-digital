@@ -42,9 +42,6 @@ const Hero = () => {
             Transformamos ideias em produtos personalizados que encantam e criam conexões verdadeiras
           </h2>
 
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Qualidade, criatividade e identidade em cada item. Tecnologia de ponta em DTF UV, DTF Têxtil e gravação a laser para resultados únicos que valorizam cada cliente e cada momento.
-          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
