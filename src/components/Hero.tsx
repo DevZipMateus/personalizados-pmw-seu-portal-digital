@@ -1,5 +1,6 @@
-import { Mail, MapPin, Clock, Instagram } from "lucide-react";
+import { MapPin, Clock, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -57,7 +58,7 @@ const Hero = () => {
               asChild
               className="border-2 border-white/60 bg-white/10 text-white hover:bg-white hover:text-secondary px-8 py-6 text-lg font-semibold transition-all hover:scale-105"
             >
-              <a href="/vitrine">Vitrine</a>
+              <Link to="/vitrine">Vitrine</Link>
             </Button>
           </div>
 
