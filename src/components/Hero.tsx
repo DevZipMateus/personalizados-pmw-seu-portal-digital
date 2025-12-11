@@ -54,10 +54,10 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection("contact")}
+              asChild
               className="border-2 border-white/60 bg-white/10 text-white hover:bg-white hover:text-secondary px-8 py-6 text-lg font-semibold transition-all hover:scale-105"
             >
-              Fale conosco
+              <a href="/vitrine">Vitrine</a>
             </Button>
           </div>
 
