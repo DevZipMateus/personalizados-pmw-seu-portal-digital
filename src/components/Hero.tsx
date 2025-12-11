@@ -36,14 +36,14 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-playfair drop-shadow-[0_6px_12px_rgba(0,0,0,0.8)]">
+            Personalizados PMW
+          </h1>
           <img 
             src={logoHero} 
             alt="Logo Personalizados PMW" 
             className="w-40 h-40 md:w-52 md:h-52 object-contain mx-auto mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
           />
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-playfair drop-shadow-[0_6px_12px_rgba(0,0,0,0.8)]">
-            Personalizados PMW
-          </h1>
           
           <h2 className="text-2xl md:text-3xl text-gold font-medium mb-8 text-balance">
             Transformamos ideias em produtos personalizados que encantam e criam conexões verdadeiras
