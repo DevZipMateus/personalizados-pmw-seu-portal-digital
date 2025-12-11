@@ -84,7 +84,7 @@ const Header = () => {
               className="h-20 w-20 object-contain transition-transform group-hover:scale-110"
             />
             <span className="text-xl font-bold gradient-gold hidden sm:block">
-              PMW Personalizados
+              Personalizados PMW
             </span>
           </Link>
 
