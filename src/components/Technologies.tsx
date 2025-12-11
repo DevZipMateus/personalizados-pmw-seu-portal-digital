@@ -32,26 +32,26 @@ const Technologies = () => {
   ];
 
   return (
-    <section id="technologies" className="py-20 bg-muted/30">
+    <section id="technologies" className="py-12 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-10 md:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
               Nossas <span className="gradient-gold">tecnologias</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
               Equipamentos de última geração para garantir qualidade e inovação em cada projeto
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {technologies.map((tech, index) => (
               <div
                 key={index}
                 className="bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-gold transition-all duration-300 hover:-translate-y-2 animate-fade-in"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className="h-64 overflow-hidden">
+                <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
                   <img
                     src={tech.image}
                     alt={tech.title}
@@ -59,22 +59,22 @@ const Technologies = () => {
                   />
                 </div>
                 
-                <div className="p-8">
-                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                    <tech.icon className="w-8 h-8 text-primary" />
+                <div className="p-5 md:p-8">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-4 md:mb-6">
+                    <tech.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                   </div>
                 
-                  <h3 className="text-2xl font-bold mb-4">{tech.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{tech.title}</h3>
                   
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 leading-relaxed">
                     {tech.description}
                   </p>
 
                   <div className="space-y-2">
                     {tech.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        <span className="text-sm text-muted-foreground">{feature}</span>
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                        <span className="text-xs md:text-sm text-muted-foreground">{feature}</span>
                       </div>
                     ))}
                   </div>

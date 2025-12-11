@@ -19,21 +19,21 @@ const Footer = () => {
 
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo e Descrição */}
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img
                 src={logoPmw}
                 alt="PMW Personalizados"
-                className="h-28 w-28 object-contain"
+                className="h-20 w-20 md:h-28 md:w-28 object-contain"
               />
-              <span className="text-xl font-bold gradient-gold">
+              <span className="text-lg md:text-xl font-bold gradient-gold">
                 Personalizados PMW
               </span>
             </div>
-            <p className="text-secondary-foreground/80 leading-relaxed mb-4">
+            <p className="text-secondary-foreground/80 leading-relaxed mb-4 text-sm md:text-base">
               Transformamos ideias em produtos personalizados que encantam. 
               Tecnologia de ponta em DTF UV, DTF Têxtil e gravação a laser.
             </p>
@@ -52,35 +52,35 @@ const Footer = () => {
 
           {/* Links Rápidos */}
           <div>
-            <h3 className="text-lg font-bold text-primary mb-4">Links rápidos</h3>
+            <h3 className="text-base md:text-lg font-bold text-primary mb-3 md:mb-4">Links rápidos</h3>
             <nav className="space-y-2">
               <button
                 onClick={() => scrollToSection("hero")}
-                className="block text-secondary-foreground/80 hover:text-primary transition-colors"
+                className="block text-secondary-foreground/80 hover:text-primary transition-colors text-sm md:text-base"
               >
                 Início
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="block text-secondary-foreground/80 hover:text-primary transition-colors"
+                className="block text-secondary-foreground/80 hover:text-primary transition-colors text-sm md:text-base"
               >
                 Sobre
               </button>
               <button
                 onClick={() => scrollToSection("technologies")}
-                className="block text-secondary-foreground/80 hover:text-primary transition-colors"
+                className="block text-secondary-foreground/80 hover:text-primary transition-colors text-sm md:text-base"
               >
                 Tecnologias
               </button>
               <button
                 onClick={() => scrollToSection("values")}
-                className="block text-secondary-foreground/80 hover:text-primary transition-colors"
+                className="block text-secondary-foreground/80 hover:text-primary transition-colors text-sm md:text-base"
               >
                 Valores
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block text-secondary-foreground/80 hover:text-primary transition-colors"
+                className="block text-secondary-foreground/80 hover:text-primary transition-colors text-sm md:text-base"
               >
                 Contato
               </button>
@@ -89,28 +89,28 @@ const Footer = () => {
 
           {/* Informações de Contato */}
           <div>
-            <h3 className="text-lg font-bold text-primary mb-4">Contato</h3>
+            <h3 className="text-base md:text-lg font-bold text-primary mb-3 md:mb-4">Contato</h3>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
                 <a
                   href="mailto:personalizadospalmas@gmail.com"
-                  className="text-secondary-foreground/80 hover:text-primary transition-colors text-sm"
+                  className="text-secondary-foreground/80 hover:text-primary transition-colors text-xs md:text-sm break-all"
                 >
                   personalizadospalmas@gmail.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-secondary-foreground/80 text-sm">
+                <MapPin className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-secondary-foreground/80 text-xs md:text-sm">
                   Quadra 208 Norte Alameda 32<br />
                   QI 17 Lote 08 Casa 05<br />
                   Palmas, TO
                 </p>
               </div>
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-secondary-foreground/80 text-sm">
+                <Clock className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-secondary-foreground/80 text-xs md:text-sm">
                   Seg. a Sex. - Horário comercial<br />
                   Fechado: 12h às 14h
                 </p>
@@ -120,12 +120,12 @@ const Footer = () => {
         </div>
 
         {/* Linha Divisória */}
-        <div className="border-t border-secondary-foreground/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-secondary-foreground/60 text-sm text-center md:text-left">
+        <div className="border-t border-secondary-foreground/10 pt-6 md:pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+            <p className="text-secondary-foreground/60 text-xs md:text-sm text-center md:text-left">
               © {currentYear} PERSONALIZADOS PMW. Todos os direitos reservados.
             </p>
-            <p className="text-secondary-foreground/60 text-sm">
+            <p className="text-secondary-foreground/60 text-xs md:text-sm">
               CNPJ: 10.926.537/0001-30
             </p>
           </div>
