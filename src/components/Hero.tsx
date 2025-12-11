@@ -52,18 +52,18 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button
               size="lg"
+              variant="outline"
               onClick={() => scrollToSection("about")}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold shadow-gold transition-all hover:scale-105"
+              className="border-2 border-white/60 bg-white/10 text-white hover:bg-white hover:text-secondary px-8 py-6 text-lg font-semibold transition-all hover:scale-105"
             >
               Conheça nossos serviços
             </Button>
             <Button
               size="lg"
-              variant="outline"
               asChild
-              className="border-2 border-white/60 bg-white/10 text-white hover:bg-white hover:text-secondary px-8 py-6 text-lg font-semibold transition-all hover:scale-105"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 text-xl font-bold shadow-gold transition-all hover:scale-110 animate-pulse ring-2 ring-primary/50 ring-offset-2 ring-offset-transparent"
             >
-              <Link to="/vitrine">Vitrine</Link>
+              <Link to="/vitrine">✨ Vitrine</Link>
             </Button>
           </div>
         </div>
