@@ -27,7 +27,7 @@ const Footer = () => {
               <img
                 src={logoPmw}
                 alt="PMW Personalizados"
-                className="h-20 w-20 object-contain"
+                className="h-28 w-28 object-contain"
               />
               <span className="text-xl font-bold gradient-gold">
                 PERSONALIZADOS PMW
