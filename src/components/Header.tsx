@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import logoPmw from "@/assets/logo-pmw.png";
 
 const Header = () => {
   const location = useLocation();
@@ -78,7 +79,7 @@ const Header = () => {
             className="flex items-center gap-3 group"
           >
             <img
-              src="/logo.png"
+              src={logoPmw}
               alt="PMW Personalizados"
               className="h-12 w-12 object-contain transition-transform group-hover:scale-110"
             />

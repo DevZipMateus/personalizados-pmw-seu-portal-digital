@@ -1,4 +1,5 @@
 import { Mail, MapPin, Clock, Instagram } from "lucide-react";
+import logoPmw from "@/assets/logo-pmw.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -24,8 +25,8 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/logo.png"
-                alt="PERSONALIZADOS PMW"
+                src={logoPmw}
+                alt="PMW Personalizados"
                 className="h-12 w-12 object-contain"
               />
               <span className="text-xl font-bold gradient-gold">
