@@ -36,7 +36,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-playfair drop-shadow-[0_6px_12px_rgba(0,0,0,0.8)]">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-playfair drop-shadow-[0_6px_12px_rgba(0,0,0,0.8)] mt-16 md:mt-24">
             Personalizados PMW
           </h1>
           <img 
