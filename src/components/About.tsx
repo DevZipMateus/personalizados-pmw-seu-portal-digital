@@ -8,7 +8,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Sobre a <span className="gradient-gold">PERSONALIZADOS PMW</span>
+              Sobre a <span className="gradient-gold">PMW Personalizados</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Somos especialistas em transformar ideias em realidade através da personalização
