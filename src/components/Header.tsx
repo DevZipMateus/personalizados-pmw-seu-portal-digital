@@ -64,10 +64,10 @@ const Header = () => {
   const navItems = [
     { label: "Início", id: "hero", type: "scroll" },
     { label: "Sobre", id: "about", type: "scroll" },
+    { label: "Vitrine", id: "/vitrine", type: "route" },
     { label: "Tecnologias", id: "technologies", type: "scroll" },
     { label: "Valores", id: "values", type: "scroll" },
     { label: "Contato", id: "contact", type: "scroll" },
-    { label: "Vitrine", id: "/vitrine", type: "route" },
   ];
 
   return (
