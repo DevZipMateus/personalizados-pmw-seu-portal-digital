@@ -29,7 +29,7 @@ const Hero = () => {
           alt="Tecnologia de personalização PERSONALIZADOS PMW"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/90 to-accent/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/60" />
       </div>
 
       {/* Content */}
