@@ -81,7 +81,7 @@ const Header = () => {
             <img
               src={logoPmw}
               alt="PMW Personalizados"
-              className="h-16 w-16 object-contain transition-transform group-hover:scale-110"
+              className="h-20 w-20 object-contain transition-transform group-hover:scale-110"
             />
             <span className="text-xl font-bold gradient-gold hidden sm:block">
               PMW Personalizados
